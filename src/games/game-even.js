@@ -8,8 +8,7 @@ export default () => {
 
   // create question for game`s round and correct answer
   const creatingQuestion = () => {
-    const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-    const randomNum = getRandomInt(0, 100);
+    const randomNum = _.getRandomInt(0, 100);
     const question = `Question: ${randomNum}`;
 
     const isEven = (num) => num % 2 === 0;

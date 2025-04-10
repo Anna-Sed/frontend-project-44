@@ -7,11 +7,10 @@ export default () => {
   _.userGreeting(user);
 
   const creatingQuestion = () => {
-    const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-    const randomNum1 = getRandomInt(0, 80);
-    const randomNum2 = getRandomInt(0, 80);
+    const randomNum1 = _.getRandomInt(0, 80);
+    const randomNum2 = _.getRandomInt(0, 80);
     const operations = ['+', '-', '*'];
-    const currentOperation = operations.at(getRandomInt(0, operations.length - 1));
+    const currentOperation = operations.at(_.getRandomInt(0, operations.length - 1));
     const question = `Question: ${randomNum1} ${currentOperation} ${randomNum2}`;
 
     let correctAnswer = 0;
