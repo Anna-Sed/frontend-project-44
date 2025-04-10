@@ -8,6 +8,8 @@ const userName = () => readlineSync.question('May I have your name? ', {
 
 const userGreeting = (user) => console.log(`Hello, ${user}`);
 
+const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+
 const game = (rule, questionForRound) => {
   console.log(rule);
   let countOfCorrectAnswer = 0;
@@ -40,6 +42,7 @@ export {
   mainGreeting,
   userName,
   userGreeting,
+  getRandomInt,
   game,
   conclusion,
 };
