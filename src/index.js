@@ -6,7 +6,7 @@ const userName = () => readlineSync.question('May I have your name? ', {
   defaultInput: 'User',
 });
 
-const userGreeting = (user) => console.log(`Hello, ${user}`);
+const userGreeting = (user) => console.log(`Hello, ${user}!`);
 
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
