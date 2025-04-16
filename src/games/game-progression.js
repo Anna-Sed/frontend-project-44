@@ -8,13 +8,13 @@ export default () => {
 
   // create question for game`s round and correct answer
   const creatingQuestion = () => {
-    let startNum = _.getRandomInt(0, 75);
-    const differenceNum = _.getRandomInt(2, 7);
+    let startingNum = _.getRandomInt(0, 75);
+    const difference = _.getRandomInt(2, 7);
     const progression = [];
-    progression.push(startNum);
+    progression.push(startingNum);
     while (progression.length !== 10) {
-      startNum += differenceNum;
-      progression.push(startNum);
+      startingNum += difference;
+      progression.push(startingNum);
     }
     const randomIndex = _.getRandomInt(1, 9);
     const correctAnswer = progression[randomIndex].toString();
@@ -24,8 +24,7 @@ export default () => {
     return [question, correctAnswer];
   };
 
-  const rule = `You need to answer 3 questions correctly.
-What number is missing in the progression?`;
+  const rule = 'What number is missing in the progression?';
   const countOfCorrectAnswer = _.game(rule, creatingQuestion);
 
   _.conclusion(user, countOfCorrectAnswer);
