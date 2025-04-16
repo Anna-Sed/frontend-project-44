@@ -16,8 +16,7 @@ export default () => {
     return [question, correctAnswer];
   };
 
-  const rule = `You need to answer 3 questions correctly.
-Answer "yes" if the number is even, otherwise answer "no".`;
+  const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
   const countOfCorrectAnswer = _.game(rule, creatingQuestion);
 
   _.conclusion(user, countOfCorrectAnswer);
