@@ -7,8 +7,8 @@ export default () => {
   _.userGreeting(user);
 
   const creatingQuestion = () => {
-    const randomNum1 = _.getRandomInt(0, 80);
-    const randomNum2 = _.getRandomInt(0, 80);
+    const randomNum1 = _.getRandomInt(0, 40);
+    const randomNum2 = _.getRandomInt(0, 40);
     const question = `Question: ${randomNum1} and ${randomNum2}`;
 
     let divisible = Math.max(randomNum1, randomNum2);
