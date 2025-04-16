@@ -7,8 +7,8 @@ export default () => {
   _.userGreeting(user);
 
   const creatingQuestion = () => {
-    const randomNum1 = _.getRandomInt(0, 80);
-    const randomNum2 = _.getRandomInt(0, 80);
+    const randomNum1 = _.getRandomInt(0, 50);
+    const randomNum2 = _.getRandomInt(0, 40);
     const operations = ['+', '-', '*'];
     const currentOperation = operations.at(_.getRandomInt(0, operations.length - 1));
     const question = `Question: ${randomNum1} ${currentOperation} ${randomNum2}`;
