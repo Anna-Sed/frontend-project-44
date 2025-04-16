@@ -9,7 +9,7 @@ export default () => {
   const creatingQuestion = () => {
     const randomNum1 = _.getRandomInt(0, 40);
     const randomNum2 = _.getRandomInt(0, 40);
-    const question = `Question: ${randomNum1} and ${randomNum2}`;
+    const question = `Question: ${randomNum1} ${randomNum2}`;
 
     let divisible = Math.max(randomNum1, randomNum2);
     let divisor = Math.min(randomNum1, randomNum2);
