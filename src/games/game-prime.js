@@ -22,8 +22,7 @@ export default () => {
     return [question, correctAnswer];
   };
 
-  const rule = `You need to answer 3 questions correctly.
-Answer "yes" if given number is prime. Otherwise answer "no".`;
+  const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const countOfCorrectAnswer = _.game(rule, creatingQuestion);
 
   _.conclusion(user, countOfCorrectAnswer);
