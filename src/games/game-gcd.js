@@ -28,8 +28,7 @@ export default () => {
     return [question, `${correctAnswer}`];
   };
 
-  const rule = `You need to answer 3 questions correctly.
-Find the greatest common divisor of given numbers.`;
+  const rule = 'Find the greatest common divisor of given numbers.';
   const countOfCorrectAnswer = _.game(rule, creatingQuestion);
 
   _.conclusion(user, countOfCorrectAnswer);
