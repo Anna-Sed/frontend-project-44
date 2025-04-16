@@ -30,7 +30,7 @@ export default () => {
     return [question, `${correctAnswer}`];
   };
 
-  const rule = 'What is result of the expression?';
+  const rule = 'What is the result of the expression?';
   const countOfCorrectAnswer = _.game(rule, creatingQuestion);
 
   _.conclusion(user, countOfCorrectAnswer);
