@@ -9,7 +9,9 @@ To pass each game you need to answer 3 questions correctly.
 
 Game is available on Linux, macOS.
 To install a package globally from a local directory, use the command
+
 `npm link`
+
 It must be run from the root directory of the project.
 
 Use commands to launch the game:
