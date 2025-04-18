@@ -7,7 +7,7 @@ export default () => {
   _.userGreeting(user);
 
   // create question for game`s round and correct answer
-  const creatingQuestion = () => {
+  const creatingGameData = () => {
     const randomNum = _.getRandomInt(0, 100);
     const question = `Question: ${randomNum}`;
 
@@ -17,7 +17,7 @@ export default () => {
   };
 
   const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const countOfCorrectAnswer = _.game(rule, creatingQuestion);
+  const countOfCorrectAnswer = _.game(rule, creatingGameData);
 
   _.conclusion(user, countOfCorrectAnswer);
 };
