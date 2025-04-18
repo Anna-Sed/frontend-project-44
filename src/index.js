@@ -10,12 +10,12 @@ const userGreeting = (user) => console.log(`Hello, ${user}!`);
 
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
-const game = (rule, questionForRound) => {
+const game = (rule, getGameData) => {
   console.log(rule);
   let countOfCorrectAnswer = 0;
   for (let i = 1; i < 4; i += 1) {
-    const expectedAnswer = questionForRound();
-    const [question, correctAnswer] = expectedAnswer;
+    const gameData = getGameData();
+    const [question, correctAnswer] = gameData;
     console.log(question);
     const userAnswer = readlineSync.question('Your answer: ');
 
