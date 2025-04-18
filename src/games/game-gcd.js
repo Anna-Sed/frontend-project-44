@@ -6,7 +6,7 @@ export default () => {
   const user = _.userName();
   _.userGreeting(user);
 
-  const creatingQuestion = () => {
+  const creatingGameData = () => {
     const randomNum1 = _.getRandomInt(0, 40);
     const randomNum2 = _.getRandomInt(0, 40);
     const question = `Question: ${randomNum1} ${randomNum2}`;
@@ -29,7 +29,7 @@ export default () => {
   };
 
   const rule = 'Find the greatest common divisor of given numbers.';
-  const countOfCorrectAnswer = _.game(rule, creatingQuestion);
+  const countOfCorrectAnswer = _.game(rule, creatingGameData);
 
   _.conclusion(user, countOfCorrectAnswer);
 };
