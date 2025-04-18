@@ -6,7 +6,7 @@ export default () => {
   const user = _.userName();
   _.userGreeting(user);
 
-  const creatingQuestion = () => {
+  const creatingGameData = () => {
     const randomNum1 = _.getRandomInt(0, 50);
     const randomNum2 = _.getRandomInt(0, 40);
     const operations = ['+', '-', '*'];
@@ -31,7 +31,7 @@ export default () => {
   };
 
   const rule = 'What is the result of the expression?';
-  const countOfCorrectAnswer = _.game(rule, creatingQuestion);
+  const countOfCorrectAnswer = _.game(rule, creatingGameData);
 
   _.conclusion(user, countOfCorrectAnswer);
 };
