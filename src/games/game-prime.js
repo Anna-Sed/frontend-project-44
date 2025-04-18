@@ -6,7 +6,7 @@ export default () => {
   const user = _.userName();
   _.userGreeting(user);
 
-  const creatingQuestion = () => {
+  const creatingGameData = () => {
     const randomNum = _.getRandomInt(2, 29);
     const question = `Question: ${randomNum}`;
 
@@ -23,7 +23,7 @@ export default () => {
   };
 
   const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const countOfCorrectAnswer = _.game(rule, creatingQuestion);
+  const countOfCorrectAnswer = _.game(rule, creatingGameData);
 
   _.conclusion(user, countOfCorrectAnswer);
 };
