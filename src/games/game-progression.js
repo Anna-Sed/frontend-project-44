@@ -7,7 +7,7 @@ export default () => {
   _.userGreeting(user);
 
   // create question for game`s round and correct answer
-  const creatingQuestion = () => {
+  const creatingGameData = () => {
     let startingNum = _.getRandomInt(0, 75);
     const difference = _.getRandomInt(2, 7);
     const progression = [];
@@ -25,7 +25,7 @@ export default () => {
   };
 
   const rule = 'What number is missing in the progression?';
-  const countOfCorrectAnswer = _.game(rule, creatingQuestion);
+  const countOfCorrectAnswer = _.game(rule, creatingGameData);
 
   _.conclusion(user, countOfCorrectAnswer);
 };
