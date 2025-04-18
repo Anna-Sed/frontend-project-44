@@ -1,37 +1,36 @@
-import * as _ from '../index.js';
+import { getRandomInt, game } from '../index.js';
+
+const calculateArithmeticResult = (operation, num1, num2) => {
+  let result = 0;
+  switch (operation) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    default:
+      result = 'We don\'t have this operation';
+  }
+  return result.toString();
+};
 
 export default () => {
-  // greeting
-  _.mainGreeting('Welcome to the Brain Games!');
-  const user = _.userName();
-  _.userGreeting(user);
-
-  const creatingGameData = () => {
-    const randomNum1 = _.getRandomInt(0, 50);
-    const randomNum2 = _.getRandomInt(0, 40);
+  // create question for game`s round and correct answer
+  const creatingDataGame = () => {
+    const randomNum1 = getRandomInt(0, 50);
+    const randomNum2 = getRandomInt(0, 40);
     const operations = ['+', '-', '*'];
-    const currentOperation = operations.at(_.getRandomInt(0, operations.length - 1));
+    const currentOperation = operations.at(getRandomInt(0, operations.length - 1));
     const question = `Question: ${randomNum1} ${currentOperation} ${randomNum2}`;
 
-    let correctAnswer = 0;
-    switch (currentOperation) {
-      case '+':
-        correctAnswer = randomNum1 + randomNum2;
-        break;
-      case '-':
-        correctAnswer = randomNum1 - randomNum2;
-        break;
-      case '*':
-        correctAnswer = randomNum1 * randomNum2;
-        break;
-      default:
-        correctAnswer = 'We don\'t have this operation';
-    }
-    return [question, `${correctAnswer}`];
+    const correctAnswer = calculateArithmeticResult(currentOperation, randomNum1, randomNum2);
+    return [question, correctAnswer];
   };
-
+  // run the game
   const rule = 'What is the result of the expression?';
-  const countOfCorrectAnswer = _.game(rule, creatingGameData);
-
-  _.conclusion(user, countOfCorrectAnswer);
+  game(rule, creatingDataGame);
 };
