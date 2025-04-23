@@ -10,16 +10,16 @@ const calculateGcdResult = (num1, num2) => {
   return divisor;
 };
 
+const createGameData = () => {
+  const randomNum1 = getRandomInt(1, 40);
+  const randomNum2 = getRandomInt(1, 40);
+  const question = `Question: ${randomNum1} ${randomNum2}`;
+
+  const correctAnswer = calculateGcdResult(randomNum1, randomNum2);
+  return [question, `${correctAnswer}`];
+};
+
 export default () => {
-  const creatingGameData = () => {
-    const randomNum1 = getRandomInt(1, 40);
-    const randomNum2 = getRandomInt(1, 40);
-    const question = `Question: ${randomNum1} ${randomNum2}`;
-
-    const correctAnswer = calculateGcdResult(randomNum1, randomNum2);
-    return [question, `${correctAnswer}`];
-  };
-
   const rule = 'Find the greatest common divisor of given numbers.';
-  game(rule, creatingGameData);
+  game(rule, createGameData);
 };
