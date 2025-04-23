@@ -1,15 +1,13 @@
 import readlineSync from 'readline-sync';
 
-const getUserName = () => readlineSync.question('May I have your name? ', {
-  defaultInput: 'User',
-});
-const getUserAnswer = () => readlineSync.question('Your answer: ');
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 const game = (rule, getGameData) => {
   // greeting
   console.log('Welcome to the Brain Games!');
-  const userName = getUserName();
+  const userName = readlineSync.question('May I have your name? ', {
+    defaultInput: 'User',
+  });
   console.log(`Hello, ${userName}!`);
 
   console.log(rule);
@@ -19,7 +17,7 @@ const game = (rule, getGameData) => {
     const gameData = getGameData();
     const [question, correctAnswer] = gameData;
     console.log(question);
-    const userAnswer = getUserAnswer();
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== correctAnswer) {
       const result = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`;
