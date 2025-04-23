@@ -8,15 +8,16 @@ const isPrime = (num) => {
   }
   return true;
 };
+// create question for game`s round and correct answer
+const createDataGame = () => {
+  const randomNum = getRandomInt(2, 67);
+  const question = `Question: ${randomNum}`;
+  const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
+  return [question, correctAnswer];
+};
+
 export default () => {
-  // create question for game`s round and correct answer
-  const creatingDataGame = () => {
-    const randomNum = getRandomInt(2, 67);
-    const question = `Question: ${randomNum}`;
-    const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
-    return [question, correctAnswer];
-  };
   // run the game
   const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  game(rule, creatingDataGame);
+  game(rule, createDataGame);
 };
