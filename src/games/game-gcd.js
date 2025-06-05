@@ -8,7 +8,7 @@ const calculateGcdResult = (num1, num2) => {
     return calculateGcdResult(divisor, remainder)
   }
   return divisor
-};
+}
 
 const createGameData = () => {
   const randomNum1 = getRandomInt(1, 40)

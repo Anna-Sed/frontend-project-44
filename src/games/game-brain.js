@@ -6,4 +6,4 @@ export default () => {
     defaultInput: 'User',
   })
   console.log(`Hello, ${userName}!`)
-};
+}

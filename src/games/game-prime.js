@@ -14,7 +14,7 @@ const createDataGame = () => {
   const question = `Question: ${randomNum}`
   const correctAnswer = isPrime(randomNum) ? 'yes' : 'no'
   return [question, correctAnswer]
-};
+}
 
 export default () => {
   // run the game

@@ -9,7 +9,7 @@ const makeProgression = (start, difference) => {
     progression.push(startingNum)
   }
   return progression
-};
+}
 
 // create question for game`s round and correct answer
 const createDataGame = () => {
@@ -22,7 +22,7 @@ const createDataGame = () => {
   progression[randomIndex] = '..'
   const question = `Question: ${progression.join(' ')}`
   return [question, correctAnswer]
-};
+}
 
 export default () => {
   // run the game

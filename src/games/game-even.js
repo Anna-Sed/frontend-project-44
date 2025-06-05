@@ -8,7 +8,7 @@ const createDataGame = () => {
   const question = `Question: ${randomNum}`
   const correctAnswer = isEven(randomNum) ? 'yes' : 'no'
   return [question, correctAnswer]
-};
+}
 export default () => {
   // run the game
   const rule = 'Answer "yes" if the number is even, otherwise answer "no".'

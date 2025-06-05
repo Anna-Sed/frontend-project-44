@@ -28,7 +28,7 @@ const createDataGame = () => {
 
   const correctAnswer = calculateArithmeticResult(currentOperation, randomNum1, randomNum2)
   return [question, correctAnswer]
-};
+}
 
 export default () => {
   // run the game
